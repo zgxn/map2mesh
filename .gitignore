@@ -1,0 +1,7 @@
+*.log
+*.out
+src/__pycache__
+src/*.asc
+src/*.inp
+src/*.exo
+src/*.dat

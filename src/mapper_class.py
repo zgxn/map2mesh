@@ -61,12 +61,11 @@ class MAPPER():
 
         return self.horizons
 
-    def map_horizons_to_layers(self):
+    def generate_ids_per_layer(self):
         '''
         traverse the list of horizons and create an array that holds
         the geological layer id for each point in the dem
         '''
-
         mapped_vals = []
         
         n_horizons = len(self.horizons)
@@ -117,3 +116,16 @@ class MAPPER():
             np.savetxt("soil-id-layer-" + str(i) + ".asc", _up, delimiter = " ")
 
         return mapped_vals
+
+    def map2mesh(self, dx_min:float, dx_max:float = 0.0, eps:float = 1.0e-2):
+        
+        self.do_mesh(dx_min)
+        
+        vals = self.generate_ids_per_layer()
+
+        for i in range(len(vals)):
+            val = vals[len(vals) - 1 - i].astype(int)            
+            self.dem.add_attribute(val, layers=[i + 1], dtype=int)
+
+        tin.dump.to_avs(self.dem, "_mesh")
+        tin.dump.to_exodus(self.dem, "_mesh.exo")

@@ -1,10 +1,10 @@
 # map2mesh
 
-![figure](img/fig-layer-0021.png)
-
 A python-based workflow to map discrete values to a mesh.  Current
 application is to prescribe geological layer types to general
 unstructured meshes for integrated hydrological modeling.
+
+![figure](img/fig-layer-0021.png)
 
 ## Dependencies
 

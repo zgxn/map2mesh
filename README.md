@@ -12,22 +12,13 @@ won't carry out multiresolution triangulations and fail with a
 This is related to counterclockwise meshing.  The current work around
 is to carry out the triangulation with `counterclockwise = True`.
 
-## Use case
+## Use cases
 
-A python-based workflow to map discrete values to a mesh.  Current
-application is to prescribe geological layer types to general
++ map2mesh: A python-based workflow to map discrete values to a mesh.
+Current application is to prescribe geological layer types to general
 unstructured meshes for integrated hydrological modeling.
 
-![figure](img/fig-layer-0021.png)
-
-### Dependencies
-
-* `numpy` for array handling and interpolation between node values
-* `matplotlib` to visualize array data
-* `tinerator` for geodata handling and interpolation of values to mesh
-* `pyvista` to visualize mesh
-
-### License
+## License
 
 [BSD-3](./LICENSE)
 

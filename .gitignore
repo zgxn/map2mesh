@@ -5,3 +5,4 @@ src/*.asc
 src/*.inp
 src/*.exo
 src/*.dat
+.DS_Store

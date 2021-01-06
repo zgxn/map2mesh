@@ -1,3 +1,9 @@
+# ------------------------------------------------------------------------------
+# -- main.py
+#
+# -- main logic for the mesh creation
+# ------------------------------------------------------------------------------
+
 from mapper_class import MAPPER
 import matplotlib.pyplot as plt
 import numpy as np
